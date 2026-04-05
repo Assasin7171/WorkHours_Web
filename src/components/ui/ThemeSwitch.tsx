@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import {useTheme} from "next-themes"
-import {MonitorCog, Moon, Sun} from "lucide-react";
+import {Moon, Sun} from "lucide-react";
 
 export function ThemeSwitch() {
     const {theme, setTheme} = useTheme()
@@ -14,37 +14,47 @@ export function ThemeSwitch() {
 
     if (!mounted) return null
 
+    const dark = <Moon onClick={()=> setTheme("dark")} className="h-8 w-8 text-primary p-1 hover:cursor-pointer"/>;
+
+    const light= <Sun onClick={()=> setTheme("light")} className="h-8 w-8 text-primary p-1 hover:cursor-pointer"/>;
+
+
     return (
-        <div className="flex items-center gap-2 rounded-xl max-w-fit border bg-surface p-1">
-            <button
-                type="button"
-                onClick={() => setTheme("light")}
-                className={`rounded-lg px-3 py-2 text-sm ${
-                    theme === "light" ? "bg-zinc-200 dark:bg-zinc-700" : ""
-                }`}
-            >
-                <Sun className="h-4 w-4"/>
-            </button>
+        <div className="">
+            {theme === "dark" ? (light) : (dark)}
 
-            <button
-                type="button"
-                onClick={() => setTheme("dark")}
-                className={`rounded-lg px-3 py-2 text-sm ${
-                    theme === "dark" ? "bg-zinc-200 dark:bg-zinc-700" : ""
-                }`}
-            >
-                <Moon className="h-4 w-4"/>
-            </button>
-
-            <button
-                type="button"
-                onClick={() => setTheme("system")}
-                className={`rounded-lg px-3 py-2 text-sm ${
-                    theme === "system" ? "bg-zinc-200 dark:bg-zinc-700" : ""
-                }`}
-            >
-                <MonitorCog className="h-4 w-4"/>
-            </button>
+            {/*<MonitorCog className="h-6 w-6 ring-1 ring-primary rounded-full p-1"/>*/}
         </div>
+        // <div className="flex items-center gap-2 rounded-xl max-w-fit border bg-surface p-1">
+        //     <button
+        //         type="button"
+        //         onClick={() => setTheme("light")}
+        //         className={`rounded-lg px-3 py-2 text-sm ${
+        //             theme === "light" ? "bg-zinc-200 dark:bg-zinc-700" : ""
+        //         }`}
+        //     >
+        //         <Sun className="h-4 w-4"/>
+        //     </button>
+        //
+        //     <button
+        //         type="button"
+        //         onClick={() => setTheme("dark")}
+        //         className={`rounded-lg px-3 py-2 text-sm ${
+        //             theme === "dark" ? "bg-zinc-200 dark:bg-zinc-700" : ""
+        //         }`}
+        //     >
+        //         <Moon className="h-4 w-4"/>
+        //     </button>
+        //
+        //     <button
+        //         type="button"
+        //         onClick={() => setTheme("system")}
+        //         className={`rounded-lg px-3 py-2 text-sm ${
+        //             theme === "system" ? "bg-zinc-200 dark:bg-zinc-700" : ""
+        //         }`}
+        //     >
+        //         <MonitorCog className="h-4 w-4"/>
+        //     </button>
+        // </div>
     )
 }

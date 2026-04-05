@@ -18,15 +18,22 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable)}>
+        <html lang="en" suppressHydrationWarning
+              className={cn("font-sans", inter.variable)}>
         <body>
         <ThemeProvider attribute="class"
                        defaultTheme="system"
-                       enableSystem
-        >
-            <div className="min-h-screen max-w-7xl mx-auto bg-bg text-text-primary p-6">
-                <NavBar/>
-                {children}
+                       enableSystem>
+            <div className=" bg-surface ">
+                <div className="min-h-screen max-w-7xl mx-auto flex flex-col text-primary">
+                    <nav className="bg-surface-low">
+                        <NavBar/>
+                    </nav>
+                    <main className="">
+                        {children}
+                    </main>
+                </div>
+
             </div>
         </ThemeProvider>
         </body>
