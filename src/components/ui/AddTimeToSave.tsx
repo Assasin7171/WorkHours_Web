@@ -15,7 +15,7 @@ export const AddTimeToSave = () => {
                     <input type="text"
                            placeholder="0.00"
                            className="w-full font-bold z-0 text-2xl outline-none"/>
-                    <span className="absolute right-6 z-10">godz</span>
+                    <span className="absolute right-6 z-8">godz</span>
                 </div>
 
                 <div className="relative bg-surface-highest p-6 rounded-2xl transition focus-within:shadow-[0_0_0_2px_var(--color-primary)] ">

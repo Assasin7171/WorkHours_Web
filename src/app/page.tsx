@@ -5,11 +5,11 @@ import SingleSession from "@/components/ui/SingleSession";
 
 export default function Home() {
     return (
-        <div className="p-5 flex flex-col">
+        <div className="my-6 flex flex-col">
             <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-col gap-2 ">
                     <span className="text-text-primary text-xl font-light uppercase">Poniedziałek, 22 MAJA</span>
-                    <h5 className="text-3xl">Dzisiaj</h5>
+                    <h5 className="text-3xl font-bold">Dzisiaj</h5>
                 </div>
 
                 <div>

@@ -24,16 +24,17 @@ export default function RootLayout({
         <ThemeProvider attribute="class"
                        defaultTheme="system"
                        enableSystem>
-            <div className=" bg-surface ">
+            <div className="bg-surface">
                 <div className="min-h-screen max-w-7xl mx-auto flex flex-col text-primary">
-                    <nav className="bg-surface-low">
+                    <nav className="bg-surface-low xl:rounded-b-2xl">
                         <NavBar/>
                     </nav>
-                    <main className="">
+
+
+                    <main className="px-4 xl:px-0">
                         {children}
                     </main>
                 </div>
-
             </div>
         </ThemeProvider>
         </body>
