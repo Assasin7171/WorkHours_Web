@@ -1,11 +1,12 @@
 import Link from "next/link";
 import {ThemeSwitch} from "@/components/ui/ThemeSwitch";
 import {User} from "lucide-react";
+import Logo from "@/components/ui/Logo";
 
 export default function DesktopNavBar() {
     return(
         <div className="hidden md:flex flex-row justify-between items-center">
-            <h1 className="text-xl text-text-primary font-bold">WorkHours</h1>
+            <Logo/>
 
             <div className="">
                 <ul className="flex flex-row md:text-xl gap-4">
